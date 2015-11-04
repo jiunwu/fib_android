@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class MainActivity extends Activity {
 
     ListView listView;
-    String[] fibArray = new String[92];
+    String[] fibArray = new String[93];
     ArrayAdapter<String> adapter;
 
     @Override
