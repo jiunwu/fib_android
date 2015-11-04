@@ -1,5 +1,7 @@
 package wu.jiun.fib;
 
+import android.app.Activity;
+import android.app.ListActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,7 +10,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     ListView listView;
     String[] fibArray = new String[92];
@@ -20,14 +22,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        listView = (ListView) findViewById(R.id.listView);
+        listView = (ListView) findViewById(R.id.list);
         fibArray[0]="0";
         fibArray[1]="1";
         adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, fibArray);
         listView.setAdapter(adapter);
 
-        fib(19);
+        fib(92);
 
     }
 
